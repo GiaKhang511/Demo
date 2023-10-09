@@ -1,0 +1,131 @@
+<!-- views/addNews.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thêm tin tức</title>
+      
+        <!-- Đường dẫn đến file CSS (nếu có) -->
+        <link rel="stylesheet" href="/styles.css">
+      
+        <style>
+          /* CSS trực tiếp vào trang thêm tin tức */
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+          }
+      
+          header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+          }
+      
+          header h1 {
+            font-size: 36px;
+            margin: 0;
+          }
+      
+          nav ul {
+            list-style-type: none;
+            padding: 0;
+          }
+      
+          nav ul li {
+            display: inline;
+            margin-right: 20px;
+          }
+      
+          nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+          }
+      
+          .add-news-form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          }
+      
+          .add-news-form h2 {
+            margin: 0;
+          }
+      
+          .form-group {
+            margin-bottom: 20px;
+          }
+      
+          .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+      
+          .form-group input[type="text"],
+          .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+      
+          .form-group textarea {
+            resize: vertical;
+            height: 200px;
+          }
+      
+          button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+      
+          button[type="submit"]:hover {
+            background-color: #555;
+          }
+        </style>
+      </head>
+<body>
+  <header>
+    <h1>Thêm tin tức</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Trang chủ</a></li>
+        <li><a href="/news">Danh sách tin tức</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="add-news-form">
+      <h2>Thông tin tin tức mới</h2>
+      <form action="/addNews" method="post">
+        <div class="form-group">
+          <label for="title">Tiêu đề:</label>
+          <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="content">Nội dung:</label>
+          <textarea id="content" name="content" required></textarea>
+        </div>
+        <button type="submit">Thêm tin tức</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Tin Tức</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xóa tin tức</title>
+</head>
+<body>
+    <h1>Xóa tin tức</h1>
+    <p>Bạn có chắc chắn muốn xóa tin tức sau đây?</p>
+    <p><strong>Tiêu đề:</strong> <%= news.title %></p>
+    <p><strong>Nội dung:</strong> <%= news.content %></p>
+    <form method="post" action="/deleteNews/<%= news.id %>">
+        <button type="submit">Xóa tin tức</button>
+    </form>
+</body>
+</html>
